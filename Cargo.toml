@@ -1,0 +1,24 @@
+[package]
+name = "btc-last-traded-price"
+version = "0.1.0"
+edition = "2021"
+authors = ["Ihor Kyrylchuk (ihorkr@gmail.com)"]
+
+[[bin]]
+name = "btc_app"
+path = "./src/main.rs"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tokio = { version = "1.37", features = ["rt-multi-thread", "macros"] }
+axum = { version = "0.7", features = ["http2"] }
+axum-server = "0.6"
+anyhow = "1.0"
+reqwest = { version = "0.12", default-features = false, features = [
+    "json",
+    "rustls-tls",
+] }
+serde = { version = "1", features = ["derive"] }
+tracing = "0.1"
+tracing-subscriber = "0.3"

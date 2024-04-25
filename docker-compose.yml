@@ -1,0 +1,14 @@
+version: '3.9'
+
+services:
+  btcapp:
+    container_name: btcapp
+    image: btcapp:0.1.0
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      BTC_PAIRS: ${BTC_PAIRS:-BTC/USD,BTC/EUR,BTC/CHF}
+      PORT_NUMBER: ${PORT_NUMBER:-8000}
+    ports:
+      - "${PORT_NUMBER:-8000}:${PORT_NUMBER:-8000}"
