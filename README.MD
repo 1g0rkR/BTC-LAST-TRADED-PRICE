@@ -1,7 +1,7 @@
 # Test application retrive Bitcoin Last Traded Price (ltp)
 
 ## Env variables
-Based on .env.example file make .env in the root folder.
+Based on `env.example` file make `.env` in the root folder.
 
 - BTC_PAIRS (example: "BTC/USD,BTC/EUR,BTC/CHF")
 - PORT_NUMBER (default 8000)
